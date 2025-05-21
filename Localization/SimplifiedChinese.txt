@@ -1,7 +1,7 @@
 1.修改 /etc/locale.gen 文件
 en_US.UTF-8 UTF-8
 zh_CN.UTF-8 UTF-8
-然后执行 locale-gen 命令
+然后执行 (sudo) locale-gen 命令
 
 
 2.设置一个英文的全局 locale
