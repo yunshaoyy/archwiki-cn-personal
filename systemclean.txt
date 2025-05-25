@@ -1,0 +1,2 @@
+删掉所有独立的包
+sudo pacman -R $(pacman -Qdtq)
