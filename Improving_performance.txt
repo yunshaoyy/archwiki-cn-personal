@@ -1,0 +1,4 @@
+1.禁用watchdog（intel）
+/etc/modprobe.d/disable-watchdog.conf
+blacklist iTCO_wdt
+然后运行sudo mkinitcpio -P
