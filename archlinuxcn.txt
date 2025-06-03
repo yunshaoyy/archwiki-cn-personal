@@ -1,4 +1,6 @@
-在 /etc/pacman.conf 文件末尾添加以下三行：
+1.在 /etc/pacman.conf 文件末尾添加以下三行：
 [archlinuxcn]
-SigLevel = Never
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+
+2.导入 GPG key:
+sudo pacman -Sy archlinuxcn-keyring
