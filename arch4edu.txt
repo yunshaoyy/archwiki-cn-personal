@@ -1,4 +1,0 @@
-在 /etc/pacman.conf 文件末尾添加以下内容：
-[arch4edu]
-SigLevel = Never
-Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch
