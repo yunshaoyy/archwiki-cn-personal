@@ -69,3 +69,15 @@ noto-fonts-cjk
     </prefer>
   </alias>
 </fontconfig>
+
+7.修正wine中文显示不正常
+首先运行 winecfg ，再运行 cd ${WINEPREFIX:-~/.wine}/drive_c/windows/Fonts && for i in /usr/share/fonts/**/*.{ttf,otf}; do ln -s "$i" ; done 。
+接着创建 chs.reg ，写入
+REGEDIT4
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\FontSubstitutes]
+"MS Shell Dlg"="Noto Sans CJK SC"
+"MS Shell Dlg 2"="Noto Sans CJK SC"
+"SimSun"="Noto Sans CJK SC"
+"Microsoft YaHei"="Noto Sans CJK SC"
+之后，运行 wine regedit chs.reg 。
+再执行 winetricks corefonts 。
